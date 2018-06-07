@@ -1,0 +1,61 @@
+{{!-- Background image --}}
+<div class="bg">
+
+{{!-- Container     --}}
+<div class="container">
+
+<h1>Express Burgers</h1>
+
+<hr>
+
+<div class="row">
+    {{!-- Undevoured List Column --}}
+    <div class="col-md-6 col-sm-12">
+        <h2>Undevoured</h2>
+        <ul class="list-group">
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+    {{!-- Devoured List Column --}}
+    <div class="col-md-6 col-sm-12">
+        <h2>Devoured</h2>
+        <ul class="list-group">
+            {{#each burgers}}
+                {{#if devoured}}
+                    <li class="list-group-item">
+                        {{name}}
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+<hr>
+
+<div class="col-md-12">
+    {{!-- New Burger Form --}}
+    <h2 class="text-center">Make a new burger</h2>
+    <form class='create-form'>
+        <div class='form-group row'>
+            {{!-- Input Text Div --}}
+            <div class="col-md-10 col-sm-9">
+                <input type="text" id="burger-type" class="form-control" name="name" placeholder="Bacon Cheese Avacado">
+            </div>
+            <div class="col-md-2 col-sm-3 mx-auto">
+            {{!-- Submit Button --}}
+            <button type='submit' class="btn btn-secondary btn-lg">Add burger</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{{!-- End Container --}}
+</div>
+
+{{!-- End backgroung image --}}
+</div>
