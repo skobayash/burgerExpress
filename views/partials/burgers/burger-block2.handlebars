@@ -1,0 +1,29 @@
+<li class="list-group-item">
+
+	<div class="row">
+
+        <div class="col">
+            {{name}}
+        </div>
+
+        <div class="col">
+
+            <div class="row floaty">
+                {{!-- Re-Order --}}
+                <button class="btn btn-secondary btn-outline-secondary reorder-burger btn-sm" data-id="{{this.id}}" data-nameof="{{this.name}}">
+                    {{#unless devoured}}MAKE AGAIN{{/unless}}
+                </button>
+            {{!-- </div> --}}
+
+            {{!-- <div class="row floaty"> --}}
+                {{!-- Delete --}}
+                <button class="btn btn-light btn-outline-secondary delete-burger btn-sm" data-id="{{this.id}}">
+                    {{#unless devoured}}DELETE{{/unless}}
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</li>

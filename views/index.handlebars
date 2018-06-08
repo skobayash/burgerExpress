@@ -26,9 +26,7 @@
         <ul class="list-group">
             {{#each burgers}}
                 {{#if devoured}}
-                    <li class="list-group-item">
-                        {{name}}
-                    </li>
+                    {{> burgers/burger-block2 devoured=false}}
                 {{/if}}
             {{/each}}
         </ul>
@@ -51,6 +49,7 @@
             <button type='submit' class="btn btn-secondary btn-lg">Add burger</button>
             </div>
         </div>
+
     </form>
 </div>
 
